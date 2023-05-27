@@ -53,6 +53,7 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = 'quick_medic.urls'
+LOGIN_REDIRECT_URL = "/appointment/create"
 
 TEMPLATES = [
     {

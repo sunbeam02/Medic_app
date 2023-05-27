@@ -1,0 +1,17 @@
+{% extends 'base.html'%}
+
+{% block content %}
+<div>
+    {{object.first_name}}
+    {{object.last_name}}
+    {{object.speciality}}
+    {{object.portfolio_number}}
+    {{object.email}}
+    {{object.phone}}
+    {% if object.is_verified%}
+    <p>Verified Doctor</p>
+    {%endif%}
+
+
+</div>
+{% endblock%}
