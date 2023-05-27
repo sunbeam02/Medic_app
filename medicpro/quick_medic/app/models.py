@@ -43,6 +43,8 @@ class RequestConsulation(models.Model):
 
     def __str__(self) -> str:
         return f"{self.patient}-{self.status}"
+    class Meta:
+        permissions = (('can_consult'), 'COnsult Doctor')
 
 class Appointment(models.Model):
     consult = models.ForeignKey(RequestConsulation, on_delete=models.CASCADE)
